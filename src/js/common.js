@@ -1,4 +1,4 @@
-'use strice';
+'use strict';
 
 var link = $('.button-element__link'),
     btn = $('.button-element__btn'),

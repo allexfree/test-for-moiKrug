@@ -65,7 +65,7 @@ gulp.task('cssLibsMin', function() {
 
 gulp.task('jsLibsMin', function() {
   return gulp.src([
-    'src/libs/**/**/*.js',
+    'src/libs/**/*.js',
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
@@ -103,7 +103,7 @@ gulp.task('style', function() {
 });
 
 gulp.task('watch', function() {
-  if (gulp.watch === 'src/sass/**/{*.sass') {
+  if (gulp.watch === 'src/sass/**/*.sass') {
     gulp.watch('src/sass/**/*.sass', ['style']);
   } else {
     gulp.watch('src/scss/**/*.scss', ['style']);
@@ -113,7 +113,7 @@ gulp.task('watch', function() {
 });
 
 gulp.task('clean', function() {
-  return del.sync('build');
+  return del.sync('dist');
 });
 
 gulp.task('buildImg', function() {
@@ -128,6 +128,7 @@ gulp.task('buildFont', function() {
 
 gulp.task('buildHtml', function() {
   gulp.src(['src/*.html'])
+    .pipe(replace('<script src="libs/jquery-3.3.1.js"></script>', ''))
     .pipe(replace('<script src="js/common.js"></script>', '<script src="js/common.min.js"></script>'))
     .pipe(replace('<link rel="stylesheet" href="libs/libs.min.css">', ''))
     .pipe(replace('<script src="libs/libs.min.js"></script>', ''))
@@ -158,6 +159,14 @@ gulp.task('buildJs', function () {
     .pipe(gulp.dest('dist/js'));
 });
 
-gulp.task('build', ['clean', 'buildImg', 'buildFont', 'buildHtml', 'buildOther', 'buildCss', 'buildJs']);
+gulp.task('build', [
+  'clean',
+  'buildImg',
+  'buildFont',
+  'buildOther',
+  'buildCss',
+  'buildJs',
+  'buildHtml'
+]);
 
 gulp.task('default', ['serve']);
