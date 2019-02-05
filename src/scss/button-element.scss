@@ -1,0 +1,100 @@
+@import "vars";
+
+.button-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-element__link {
+  display: block;
+  width: 180px;
+  padding: 12px 0;
+  margin-bottom: 50px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-image: linear-gradient(to bottom, $color-two, $color-three);
+  border-radius: 30px;
+  &:hover,
+  &:focus {
+    background-image: linear-gradient(to top, $color-two, $color-three);
+  }
+
+  &:active {
+    background-image: linear-gradient(to top, $color-two, $color-two);
+  }
+}
+
+.button-element__link--inactive {
+  color: #cccccc;
+  background-image: linear-gradient(to top, silver, silver);
+  &:focus,
+  &:hover,
+  &:active {
+    background-image: linear-gradient(to top, silver, silver);
+  }
+}
+
+.button-element__btn {
+  display: block;
+  width: 180px;
+  padding: 15px 0;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-image: linear-gradient(to bottom, $color-two, $color-three);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-image: linear-gradient(to top, $color-two, $color-three);
+  }
+
+  &:active {
+    background-image: linear-gradient(to top, $color-two, $color-two);
+  }
+
+  &:disabled {
+    color: #cccccc;
+    background-image: linear-gradient(to top, silver, silver);
+  }
+}
+
+@media (min-width: 768px) {
+  .button-element__link,
+  .button-element__btn {
+    color: #111111;
+    background-image: linear-gradient(to bottom, $color-one, $color-four);
+    &:focus,
+    &:hover {
+      background-image: linear-gradient(to top, $color-one, $color-four);
+    }
+
+    &:active {
+      background-image: linear-gradient(to top, $color-four, $color-four);
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .button-element {
+    flex-direction: row;
+  }
+
+  .button-element__link,
+  .button-element__btn {
+    width: 220px;
+    margin-bottom: 0;
+    margin-right: 50px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .button-element__btn {
+    order: -1;
+  }
+}

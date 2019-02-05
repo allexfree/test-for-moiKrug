@@ -1,0 +1,22 @@
+// typography
+
+$font-one: "Roboto", Arial, Helvetica, sans-serif;
+
+
+// colors
+
+$color-one: greenyellow;
+$color-two: aqua;
+$color-three: lightskyblue;
+$color-four: lawngreen;
+
+
+// mixins
+
+@mixin pseudo($cnt: "", $pos: absolute, $top: 0, $left: 0, $disp: flex) {
+  content: $cnt;
+  position: $pos;
+  top: $top;
+  left: $left;
+  display: $disp;
+}

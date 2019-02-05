@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Test for moiKrug</title>
+</head>
+
+<body>
+  <header class="page-header"></header>
+
+  <main class="page-main">
+    <div class="page-main__wrapper">
+
+      <section class="button-element">
+        <a class="button-element__link" href="login.html">Войти</a>
+        <button class="button-element__btn" type="button" aria-label="Заполнить форму">Написать</button>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="page-footer"></footer>
+
+  <div class="popup-overlay hidden">
+    <form class="popup-form" action="#" method="POST">
+      <fieldset class="popup-form__group">
+        <div class="popup-form__wrapper">
+          <input type="hidden" name="project_name" value="testForMoiKrug">
+          <input type="hidden" name="admin_email" value="user@mail.ru">
+          <input type="hidden" name="form_subject" value="Сообщение с сайта">
+
+          <input class="popup-form__input" type="text" name="Имя" pattern="(^[a-zа-яA-ZА-Я][a-zа-яA-ZА-Я0-9-_\.\s]{1,20}$)"
+            placeholder="Ваше имя">
+          <input class="popup-form__input" type="email" name="Электропочта" pattern="(\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6})"
+            placeholder="Ваш email *" required>
+          <input class="popup-form__input" type="tel" name="Номер телефона" pattern="(\+?\d[- .]*){7,13}" placeholder="+7 XXX XXX XX XX *"
+            required>
+          <textarea class="popup-form__textarea" name="Текст письма" placeholder="Введите любой текст, пожалуйста"></textarea>
+          <p class="popup-form__text"><span>*</span> - поля, отмеченные звездочкой обязательны для заполнения</p>
+          <button class="popup-form__btn" type="submit">Отправить</button>
+          <p class="popup-form__paragraph">Нажимая на кнопку "Отправить" я даю свое согласие на обработку моих
+            персональных данных, с политикой <a href="conf.html" rel="noopener" target="_blank">политикой
+              конфиденциальности</a> ознакомлен</p>
+        </div>
+      </fieldset>
+      <button class="btn-close" type="button" aria-label="Закрыть окно"></button>
+    </form>
+  </div>
+
+  <div class="popup-login-overlay hidden">
+    <form class="popup-login-form" action="#" method="GET">
+      <fieldset class="popup-login-form__group">
+        <div class="popup-login-form__wrapper">
+          <input class="popup-login-form__input" type="text" name="логин" placeholder="Логин" required>
+          <a class="popup-login-form__link" href="password-recovery.html">Забыли пароль?</a>
+          <input class="popup-login-form__input" type="text" name="пароль" placeholder="Пароль" required>
+          <div class="popup-login-form__block">
+            <div class="popup-login-form__remember">
+              <input id="input-checkbox" class="popup-login-form__input-checkbox" type="checkbox" name="remember">
+              <label class="popup-login-form__label-checkbox" for="input-checkbox">Запомнить меня</label>
+            </div>
+            <button class="popup-login-form__btn" type="submit">Войти</button>
+          </div>
+        </div>
+      </fieldset>
+      <button class="login-btn-close" type="button" aria-label="Закрыть окно"></button>
+    </form>
+  </div>
+
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <script src="libs/jquery-3.3.1.js"></script>
+  <script src="js/common.js"></script>
+</body>
+
+</html>

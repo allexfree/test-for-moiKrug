@@ -1,0 +1,16 @@
+/node_modules/
+/dist/
+/.git/
+/.vscode/
+/**/_backstage
+/**/package-lock.json
+/**/Thumbs.db
+/**/*.DS_Store
+.idea
+*.ai
+*.log
+*.pdf
+*.psd
+*.sublime*
+node_modules/
+npm-debug.*

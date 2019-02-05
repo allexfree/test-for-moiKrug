@@ -1,0 +1,45 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "test for moiKrug",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allexfree/test-for-moiKrug.git"
+  },
+  "author": "allexfree",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allexfree/test-for-moiKrug/issues"
+  },
+  "homepage": "https://github.com/allexfree/test-for-moiKrug#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.3.1",
+    "browser-sync": "^2.26.3",
+    "cssnano": "^4.1.7",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-pngquant": "^1.0.12",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-scss": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-svgo": "^1.5.4",
+    "gulp-uglify": "^3.0.1",
+    "imagemin-jpeg-recompress": "^5.1.0",
+    "node-normalize-scss": "^8.0.0",
+    "postcss-focus": "^4.0.0"
+  },
+  "dependencies": {
+    "normalize.sass": "^3.0.3-2"
+  }
+}
